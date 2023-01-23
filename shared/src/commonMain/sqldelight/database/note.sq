@@ -2,6 +2,11 @@ CREATE TABLE noteEntity(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
     content TEXT NOT NULL,
-    noteColor INTEGER NOT NULL,
-    dateCreated INTEGER NOT NULL
+    dateCreated INTEGER NOT NULL,
+    noteColor INTEGER NOT NULL
 );
+
+getAllNotes: SELECT * FROM noteEntity;
+getNoteById: SELECT * FROM noteEntity WHERE id = ?;
+insertNote: INSERT OR REPLACE INTO noteEntity(id, title, content, dateCreated, noteColor) VALUES( ?, ?, ?, ?, ?);
+deleteNote: DELETE FROM noteEntity WHERE id = ?;
