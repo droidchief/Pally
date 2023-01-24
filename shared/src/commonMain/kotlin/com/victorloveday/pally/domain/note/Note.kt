@@ -1,4 +1,4 @@
-package com.victorloveday.pally.domain
+package com.victorloveday.pally.domain.note
 
 import com.victorloveday.pally.presentation.*
 import kotlinx.datetime.LocalDateTime
@@ -15,6 +15,7 @@ data class Note(
 ) {
     companion object {
         private val colors = listOf(RedOrangeHex, RedPinkHex, BabyBlueHex, VioletHex, LightGreenHex)
+
         fun generateRandomColour() = colors.random()
     }
 }
