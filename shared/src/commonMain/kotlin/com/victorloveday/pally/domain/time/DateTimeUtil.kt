@@ -10,7 +10,7 @@ object DateTimeUtil {
         return Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
     }
 
-   fun toEnochMillis(dataTime: LocalDateTime): Long {
+   fun toEpochMillis(dataTime: LocalDateTime): Long {
        return dataTime.toInstant(TimeZone.currentSystemDefault()).toEpochMilliseconds()
    }
 

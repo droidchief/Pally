@@ -3,10 +3,10 @@ CREATE TABLE noteEntity(
     title TEXT NOT NULL,
     content TEXT NOT NULL,
     dateCreated INTEGER NOT NULL,
-    noteColor INTEGER NOT NULL
+    colorHex INTEGER NOT NULL
 );
 
 getAllNotes: SELECT * FROM noteEntity;
 getNoteById: SELECT * FROM noteEntity WHERE id = ?;
-insertNote: INSERT OR REPLACE INTO noteEntity(id, title, content, dateCreated, noteColor) VALUES( ?, ?, ?, ?, ?);
+insertNote: INSERT OR REPLACE INTO noteEntity(id, title, content, dateCreated, colorHex) VALUES( ?, ?, ?, ?, ?);
 deleteNote: DELETE FROM noteEntity WHERE id = ?;
